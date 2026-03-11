@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const Tesseract = require('tesseract.js');
-const pdfParse = require('pdf-parse');
+const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
@@ -25,27 +25,59 @@ router.post('/analyze-image', upload.single('document'), async (req, res) => {
     // Read the file natively to detect the actual format (robust method)
     const fileBuffer = fs.readFileSync(filePath);
     
-    // Check magic bytes for PDF: %PDF- (Hex: 25 50 44 46 2D)
-    const isPDF = fileBuffer.length > 4 && 
-                  fileBuffer[0] === 0x25 && 
-                  fileBuffer[1] === 0x50 && 
-                  fileBuffer[2] === 0x44 && 
-                  fileBuffer[3] === 0x46;
+    // Combine magic bytes with explicit mimetype and extension check to robustly detect PDFs
+    const hasPdfMagic = fileBuffer.length > 4 && 
+                        fileBuffer[0] === 0x25 && 
+                        fileBuffer[1] === 0x50 && 
+                        fileBuffer[2] === 0x44 && 
+                        fileBuffer[3] === 0x46;
+    
+    const isPDF = hasPdfMagic || 
+                  req.file.mimetype === 'application/pdf' || 
+                  req.file.originalname.toLowerCase().endsWith('.pdf');
 
     console.log("File uploaded:", req.file.originalname, "Detected as PDF:", isPDF);
+
+    // Helper timeout wrapper to prevent hanging parsing libraries
+    const timeoutPromise = (promise, ms, message) => {
+        return Promise.race([
+            promise,
+            new Promise((_, reject) => setTimeout(() => reject(new Error(message)), ms))
+        ]);
+    };
 
     try {
         let extractedText = '';
 
         if (isPDF) {
-            // Read PDF and extract text
-            const pdfData = fs.readFileSync(filePath);
-            const data = await pdfParse(pdfData);
-            extractedText = data.text;
+            // Use isolated child process to avoid pdf-parse hanging the Express event loop
+            try {
+                extractedText = await new Promise((resolve, reject) => {
+                    const workerPath = path.join(__dirname, '../pdf_extract_worker.js');
+                    const child = spawn(process.execPath, [workerPath, filePath], { timeout: 20000 });
+                    let output = '';
+                    let errOutput = '';
+                    child.stdout.on('data', d => { output += d.toString(); });
+                    child.stderr.on('data', d => { errOutput += d.toString(); });
+                    child.on('close', code => {
+                        if (code === 0) resolve(output);
+                        else reject(new Error('PDF worker failed: ' + errOutput));
+                    });
+                    child.on('error', reject);
+                });
+            } catch (err) {
+                console.error('PDF child process error:', err.message);
+                throw new Error('Failed to extract PDF text: ' + err.message);
+            }
         } else {
             // Process Image via OCR
-            const tesseractResult = await Tesseract.recognize(filePath, 'eng');
-            extractedText = tesseractResult.data.text;
+            try {
+                const tesseractResult = await timeoutPromise(Tesseract.recognize(filePath, 'eng'), 25000, 'Image OCR timed out');
+                extractedText = tesseractResult.data.text;
+            } catch (err) {
+                console.error('Tesseract Engine error:', err.message);
+                throw new Error('Failed to OCR image: ' + err.message);
+            }
         }
 
         // Cleanup uploaded file async to prevent EBUSY locks on Windows
@@ -72,11 +104,13 @@ router.post('/analyze-image', upload.single('document'), async (req, res) => {
             // using gemini-1.5-flash which is universally supported by the legacy v1beta endpoint
             const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-            const prompt = `Analyze the following text extracted from a government policy document (PDF/Image OCR). 
-Please extract and summarize exactly:
-1. Who is eligibility for this scheme?
+            const prompt = `Analyze the following text extracted from a government document (PDF/Image OCR). 
+First, try to check whether the uploaded data is legit and satisfies scheme requirements by extracting:
+1. Who is eligible for this scheme?
 2. What are the key benefits provided?
-If the text is unreadable or not related to a policy, please indicate that.
+
+If the text is not a scheme document, seems absurd, or gives any backend issues regarding scheme requirements, do the following instead:
+Summarize the document by reading it and give a clear summary of what is in the pdf/doc.
 
 Extracted Text:
 ${extractedText}

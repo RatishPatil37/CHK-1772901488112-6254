@@ -14,107 +14,112 @@ const DICTIONARY = {
   'English': {
     title: "Find Your Government Benefit",
     subtitle: "Discover schemes you're entitled to — in your language, instantly.",
-    tab_browse: "📋 Browse Schemes",
-    tab_ai: "🤖 AI Assistant + Voice",
-    tab_fraud: "🗺️ Fraud Heatmap",
-    tab_pdf: "📄 PDF Wizard",
+    tab_browse: "Browse Schemes",
+    tab_ai: "AI Assistant + Voice",
+    tab_fraud: "Fraud Heatmap",
+    tab_pdf: "PDF Wizard",
+    tab_location: "Nearby Offices",
     active_schemes: "Active Schemes",
     categories: "Categories",
     languages: "Languages",
     fraud_protection: "Fraud Protection",
-    apply_now: "Apply Now →",
+    apply_now: "Apply Now",
     eligibility_score: "Your Eligibility Score",
-    sync_live: "📊 Sync Live Schemes",
-    my_profile: "👤 MY PROFILE",
+    sync_live: "Sync Live Schemes",
+    my_profile: "MY PROFILE",
     view_profile: "View Profile",
     logout: "Logout",
     login: "Login with Google",
-    language_header: "🌐 LANGUAGE",
-    filters_header: "🔍 SCHEME FILTERS"
+    language_header: "LANGUAGE",
+    filters_header: "SCHEME FILTERS"
   },
   'हिंदी': {
     title: "अपना सरकारी लाभ खोजें",
     subtitle: "अपनी भाषा में तुरंत उन योजनाओं की खोज करें जिनके आप हकदार हैं।",
-    tab_browse: "📋 योजनाएं खोजें",
-    tab_ai: "🤖 एआई सहायक + वॉयस",
-    tab_fraud: "🗺️ धोखाधड़ी हीटमैप",
-    tab_pdf: "📄 पीडीएफ विश्लेषक",
+    tab_browse: "योजनाएं खोजें",
+    tab_ai: "एआई सहायक + वॉयस",
+    tab_fraud: "धोखाधड़ी हीटमैप",
+    tab_pdf: "पीडीएफ विश्लेषक",
+    tab_location: "निकटतम कार्यालय",
     active_schemes: "सक्रिय योजनाएं",
     categories: "श्रेणियाँ",
     languages: "भाषाएं",
     fraud_protection: "धोखाधड़ी सुरक्षा",
-    apply_now: "अभी आवेदन करें →",
+    apply_now: "अभी आवेदन करें",
     eligibility_score: "आपकी पात्रता स्कोर",
-    sync_live: "📊 लाइव सिंक",
-    my_profile: "👤 मेरी प्रोफ़ाइल",
+    sync_live: "लाइव सिंक",
+    my_profile: "मेरी प्रोफ़ाइल",
     view_profile: "प्रोफ़ाइल देखें",
     logout: "लॉग आउट",
     login: "Google से लॉगिन करें",
-    language_header: "🌐 भाषा",
-    filters_header: "🔍 फिल्टर्स"
+    language_header: "भाषा",
+    filters_header: "फिल्टर्स"
   },
   'मराठी': {
     title: "तुमचा सरकारी लाभ शोधा",
     subtitle: "तुमच्या भाषेत लगेचच तुम्ही पात्र असलेल्या योजना शोधा.",
-    tab_browse: "📋 योजना शोधा",
-    tab_ai: "🤖 AI सहाय्यक + व्हॉइस",
-    tab_fraud: "🗺️ फसवणूक हीटमॅप",
-    tab_pdf: "📄 PDF विश्लेषक",
+    tab_browse: "योजना शोधा",
+    tab_ai: "AI सहाय्यक + व्हॉइस",
+    tab_fraud: "फसवणूक हीटमॅप",
+    tab_pdf: "PDF विश्लेषक",
+    tab_location: "जवळची कार्यालये",
     active_schemes: "सक्रिय योजना",
     categories: "श्रेण्या",
     languages: "भाषा",
     fraud_protection: "फसवणूक संरक्षण",
-    apply_now: "आता अर्ज करा →",
+    apply_now: "आता अर्ज करा",
     eligibility_score: "तुमचा पात्रता स्कोअर",
-    sync_live: "📊 लाइव्ह सिंक",
-    my_profile: "👤 माझी प्रोफाईल",
+    sync_live: "लाइव्ह सिंक",
+    my_profile: "माझी प्रोफाईल",
     view_profile: "प्रोफाईल पहा",
     logout: "लॉगआउट",
     login: "Google सह लॉग इन करा",
-    language_header: "🌐 भाषा",
-    filters_header: "🔍 फिल्टर्स"
+    language_header: "भाषा",
+    filters_header: "फिल्टर्स"
   },
   'தமிழ்': {
     title: "உங்கள் அரசு நன்மையை கண்டறியவும்",
     subtitle: "உங்களுக்கு உரிமையான திட்டங்களை — உங்கள் மொழியில், உடனடியாக கண்டறியவும்.",
-    tab_browse: "📋 திட்டங்களை உலாவு",
-    tab_ai: "🤖 AI உதவியாளர் + குரல்",
-    tab_fraud: "🗺️ மோசடி வெப்ப வரைபடம்",
-    tab_pdf: "📄 PDF வழிகாட்டி",
+    tab_browse: "திட்டங்களை உலாவு",
+    tab_ai: "AI உதவியாளர் + குரல்",
+    tab_fraud: "மோசடி வெப்ப வரைபடம்",
+    tab_pdf: "PDF வழிகாட்டி",
+    tab_location: "அருகிலுள்ள அலுவலகங்கள்",
     active_schemes: "செயலில் உள்ள திட்டங்கள்",
     categories: "வகைகள்",
     languages: "மொழிகள்",
     fraud_protection: "மோசடி பாதுகாப்பு",
-    apply_now: "இப்போது விண்ணப்பிக்கவும் →",
+    apply_now: "இப்போது விண்ணப்பிக்கவும்",
     eligibility_score: "உங்கள் தகுதி மதிப்பெண்",
-    sync_live: "📊 நேரடி சுருக்கம்",
-    my_profile: "👤 என் சுயவிவரம்",
+    sync_live: "நேரடி சுருக்கம்",
+    my_profile: "என் சுயவிவரம்",
     view_profile: "சுயவிவரத்தைக் காண்க",
     logout: "வெளியேறு",
     login: "Google உடன் உள்நுழைக",
-    language_header: "🌐 மொழி",
-    filters_header: "🔍 திட்ட வடிப்பான்கள்"
+    language_header: "மொழி",
+    filters_header: "திட்ட வடிப்பான்கள்"
   },
   'తెలుగు': {
     title: "మీ ప్రభుత్వ ప్రయోజనాన్ని కనుగొనండి",
     subtitle: "మీకు అర్హత ఉన్న పథకాలను — మీ భాషలో, తక్షణమే కనుగొనండి.",
-    tab_browse: "📋 పథకాలను బ్రౌజ్ చేయండి",
-    tab_ai: "🤖 AI అసిస్టెంట్ + వాయిస్",
-    tab_fraud: "🗺️ మోసాల హీట్‌మ్యాప్",
-    tab_pdf: "📄 PDF విశ్లేషకుడు",
+    tab_browse: "పథకాలను బ్రౌజ్ చేయండి",
+    tab_ai: "AI అసిస్టెంట్ + వాయిస్",
+    tab_fraud: "మోసాల హీట్‌మ్యాప్",
+    tab_pdf: "PDF విశ్లేషకుడు",
+    tab_location: "సమీప కార్యాలయాలు",
     active_schemes: "క్రియాశీల పథకాలు",
     categories: "కేటగిరీలు",
     languages: "భాషలు",
     fraud_protection: "మోసం రక్షణ",
-    apply_now: "ఇప్పుడే దరఖాస్తు చేసుకోండి →",
+    apply_now: "ఇప్పుడే దరఖాస్తు చేసుకోండి",
     eligibility_score: "మీ అర్హత స్కోరు",
-    sync_live: "📊 లైవ్ సింక్",
-    my_profile: "👤 నా ప్రొఫైల్",
+    sync_live: "లైవ్ సింక్",
+    my_profile: "నా ప్రొఫైల్",
     view_profile: "ప్రొఫైల్ చూడండి",
     logout: "లాగ్అవుట్",
     login: "Google తో లాగిన్ చేయండి",
-    language_header: "🌐 భాష",
-    filters_header: "🔍 ఫిల్టర్లు"
+    language_header: "భాష",
+    filters_header: "ఫిల్టర్లు"
   }
 };
 
@@ -264,6 +269,27 @@ function App() {
     }
   };
 
+  // Location params state for location tracer
+  const [locationParams, setLocationParams] = useState(null);
+  const [showMapPins, setShowMapPins] = useState(false);
+
+  useEffect(() => {
+    if (activeTab === 'location' && !locationParams) {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            setLocationParams({ lat: position.coords.latitude, lng: position.coords.longitude });
+          },
+          (error) => {
+            console.error("Error getting location", error);
+            // Default location: New Delhi
+            setLocationParams({ lat: 28.6139, lng: 77.2090 });
+          }
+        );
+      }
+    }
+  }, [activeTab]);
+
   // ── Sync schemes + trigger WhatsApp notification ──
   const syncSchemes = async () => {
       console.log("SYNC CLICKED");
@@ -344,16 +370,18 @@ function App() {
         <div className={`app ${isHighContrast ? 'high-contrast' : ''}`} style={{ fontSize: `${16 * fontSizeMultiplier}px` }}>
           {/* Top Banner */}
           <div className="top-banner">
-            🇮🇳 भारत सरकार | Government of India | LOKSEVA — Powered by Firecrawl · Gemini · LangGraph
+            <div className="top-banner-inner">
+              <span>Government of India | भारत सरकार</span>
+              <span>Powered by LOKSEVA Platform</span>
+            </div>
           </div>
 
           <div className="app-container">
             {/* Left Sidebar */}
             <aside className="sidebar">
               <div className="sidebar-header">
-                <div className="logo">🏛️</div>
                 <h1>LOKSEVA</h1>
-                <p>Smart Scheme Finder for Every Citizen</p>
+                <p>Smart Scheme Finder</p>
               </div>
 
               {/* Language Section */}
@@ -433,14 +461,14 @@ function App() {
 
               {/* Data Sync */}
               <div className="sidebar-section">
-                <h3>☁️ DATA SYNC</h3>
+                <h3>DATA SYNC</h3>
                <button
                   type="button"
                   className="sync-btn"
                   disabled={isLoading}
                   onClick={syncSchemes}
               >
-                {isLoading ? "🔄 Syncing..." : t('sync_live')}
+                {isLoading ? "Syncing..." : t('sync_live')}
               </button>
               </div>
             </aside>
@@ -457,7 +485,7 @@ function App() {
 
               {/* Hero Section */}
               <section className="hero-section">
-                <h2>🏛️ {t('title')}</h2>
+                <h2>{t('title')}</h2>
                 <p>{t('subtitle')}</p>
                 <div className="hero-stats">
                   <div className="stat-pill">
@@ -496,10 +524,16 @@ function App() {
                   {t('tab_pdf')}
                 </button>
                 <button
+                  className={`tab ${activeTab === 'location' ? 'active' : ''}`}
+                  onClick={() => setActiveTab('location')}
+                >
+                  {t('tab_location')}
+                </button>
+                <button
                   className={`tab ${activeTab === 'fraud' ? 'active' : ''}`}
                   onClick={() => setActiveTab('fraud')}
                 >
-                  📰 Taaza Khabar
+                  Latest Updates
                 </button>
               </div>
 
@@ -514,14 +548,14 @@ function App() {
                       {filteredSchemes.map((scheme) => (
                         <div key={scheme._id} className="scheme-card">
                           <div className="card-header" style={{ backgroundColor: getCategoryColor(scheme.category) }}>
-                            <div className="card-category">⭐ {scheme.category?.toUpperCase() || 'GENERAL'}</div>
+                            <div className="card-category">{scheme.category?.toUpperCase() || 'GENERAL'}</div>
                             <h3 className="card-title">{scheme.scheme_name}</h3>
                           </div>
                           <div className="card-body">
                             <p className="card-summary">{scheme.summary}</p>
                             <div className="card-meta">
-                              <span className="meta-tag">📍 {scheme.state}</span>
-                              <span className="meta-tag">💰 {scheme.income_level}</span>
+                              <span className="meta-tag">State: {scheme.state}</span>
+                              <span className="meta-tag">Income: {scheme.income_level}</span>
                             </div>
                             <div className="eligibility-score">
                               <div className="score-label">{t('eligibility_score')}: <strong>{scheme.eligibility_score}%</strong></div>
@@ -544,7 +578,7 @@ function App() {
 
               {activeTab === 'assistant' && (
                 <div className="tab-content">
-                  <h3>🤖 {t('tab_ai')}</h3>
+                  <h3>{t('tab_ai')}</h3>
                   <p>Chat with our AI assistant or use voice search to find schemes.</p>
                 </div>
               )}
@@ -558,7 +592,7 @@ function App() {
                       <p>Drop a confusing government policy PDF or Image here. Our AI will instantly extract your eligibility and benefits.</p>
                     </div>
                   </div>
-                  <div className="pdf-dropzone" style={{ position: 'relative', overflow: 'hidden' }}>
+                  <div className="pdf-dropzone" style={{ position: 'relative', overflow: 'hidden', padding: '40px', background: '#ffffff', border: '2px dashed #103567', borderRadius: '4px', marginTop: '20px' }}>
                     <input 
                       type="file" 
                       accept="image/*,.pdf" 
@@ -568,12 +602,14 @@ function App() {
                         opacity: 0, cursor: 'pointer', zIndex: 10 
                       }} 
                     />
-                    <UploadCloud size={64} color="#a0aec0" className="upload-icon" />
+                    <div style={{ pointerEvents: 'none', position: 'relative', zIndex: 1 }}>
+                      <UploadCloud size={64} color="#103567" className="upload-icon" style={{ margin: '0 auto 10px auto', display: 'block' }} />
                     <h4>Drag & Drop Policy PDF / Image</h4>
                     <p>Maximum file size: 10MB</p>
-                    <button className="btn-upload" style={{ pointerEvents: 'none' }}>
-                      {uploadStatus === 'uploading' ? 'Analyzing...' : 'Browse Files'}
-                    </button>
+                      <button className="btn-upload" style={{ pointerEvents: 'none', marginTop: '15px' }}>
+                        {uploadStatus === 'uploading' ? 'Analyzing...' : 'Browse Files'}
+                      </button>
+                    </div>
                   </div>
 
                   {uploadStatus === 'uploading' && (
@@ -600,31 +636,102 @@ function App() {
                 </div>
               )}
 
+              {activeTab === 'location' && (
+                <div className="tab-content taaza-dashboard">
+                  <div className="location-tracer-container">
+                    <div className="tracer-header">
+                      <h3>Nearby Government Offices</h3>
+                      <p>Locate government offices within a radius based on your current location.</p>
+                    </div>
+                    {locationParams ? (
+                      <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+                        <iframe
+                          title="Government Offices Locator"
+                          width="100%"
+                          height="100%"
+                          frameBorder="0"
+                          style={{ border: '1px solid #dee2e6', borderRadius: '4px' }}
+                          referrerPolicy="no-referrer-when-downgrade"
+                          src={showMapPins 
+                            ? `https://www.google.com/maps/embed/v1/search?key=AIzaSyBo76tcZqaSv8KSTeoAUhEdtnTLW28HTtg&q=government+offices&center=${locationParams.lat},${locationParams.lng}&zoom=14`
+                            : `https://www.google.com/maps/embed/v1/place?key=AIzaSyBo76tcZqaSv8KSTeoAUhEdtnTLW28HTtg&q=${locationParams.lat},${locationParams.lng}&zoom=14`}
+                          allowFullScreen>
+                        </iframe>
+                        <button 
+                          className="btn-apply"
+                          onClick={() => setShowMapPins(!showMapPins)}
+                          style={{
+                            position: 'absolute',
+                            bottom: '20px',
+                            left: '50%',
+                            transform: 'translateX(-50%)',
+                            padding: '12px 24px',
+                            fontSize: '1rem',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                            zIndex: 10,
+                            margin: 0,
+                            borderRadius: '24px',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px'
+                          }}
+                        >
+                          <span style={{ fontSize: '1.2rem', marginTop: '-2px' }}>{showMapPins ? '👤' : '🏛️'}</span> 
+                          {showMapPins ? 'Show My Location' : 'Find Nearby Govt Offices'}
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="location-loading-state">
+                        Waiting for location access to show nearby government offices...
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
               {activeTab === 'fraud' && (
                 <div className="tab-content taaza-dashboard">
                   <div className="fraud-header">
                     <div>
-                      <h3>📰 Taaza Khabar</h3>
-                      <p>Latest updates and dummy news regarding government schemes in India.</p>
+                      <h3>Latest Updates</h3>
+                      <p>Latest notifications and news regarding government schemes in India.</p>
                     </div>
                   </div>
 
                   <div className="taaza-khabar-container">
-                    {taazaKhabarNews.map((news, index) => (
-                      <div 
-                        key={news.id} 
-                        className="news-item" 
-                        style={{ animationDelay: `${index * 0.15}s` }}
-                      >
-                        <div className="news-header">
-                          <span className="news-title">{news.title}</span>
-                          <span className="news-meta">{news.date} | {news.time} IST</span>
-                        </div>
-                        <div className="news-desc">
-                          {news.description}
-                        </div>
+                    <div className="marquee-wrapper">
+                      <div className="marquee-content">
+                        {taazaKhabarNews.map((news, index) => (
+                          <div 
+                            key={news.id} 
+                            className="news-item curved-square" 
+                          >
+                            <div className="news-header">
+                              <span className="news-title">{news.title}</span>
+                              <span className="news-meta">{news.date} | {news.time} IST</span>
+                            </div>
+                            <div className="news-desc">
+                              {news.description}
+                            </div>
+                          </div>
+                        ))}
+                        {/* Duplicate for infinite scrolling effect */}
+                        {taazaKhabarNews.map((news, index) => (
+                          <div 
+                            key={`dup-${news.id}`} 
+                            className="news-item curved-square" 
+                          >
+                            <div className="news-header">
+                              <span className="news-title">{news.title}</span>
+                              <span className="news-meta">{news.date} | {news.time} IST</span>
+                            </div>
+                            <div className="news-desc">
+                              {news.description}
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
                 </div>
               )}
